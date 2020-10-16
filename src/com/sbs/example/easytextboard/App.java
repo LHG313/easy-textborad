@@ -71,7 +71,7 @@ public class App {
 				System.out.println("번호 / 제목");
 
 				for (int i = 1; i <= lastArticleId; i++) {
-					Article article = null;
+					Article article = getArticle(i);
 
 					if (i == 1) {
 						article = article1;
