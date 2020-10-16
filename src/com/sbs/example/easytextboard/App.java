@@ -47,15 +47,10 @@ public class App {
 				System.out.printf("내용 : ");
 				body = sc.nextLine();
 
-				if (id == 1) {
-					article1.id = id;
-					article1.title = title;
-					article1.body = body;
-				} else if (id == 2) {
-					article2.id = id;
-					article2.title = title;
-					article2.body = body;
-				}
+				Article article = getArticle(id);
+				article.id = id;
+				article.title = title;
+				article.body = body;
 
 				System.out.printf("%d번 게시물이 생성되었습니다.\n", id);
 
@@ -71,7 +66,7 @@ public class App {
 				System.out.println("번호 / 제목");
 
 				for (int i = 1; i <= lastArticleId; i++) {
-					Article article = getArticle(i);
+					Article article = null;
 
 					if (i == 1) {
 						article = article1;
