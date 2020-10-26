@@ -36,8 +36,7 @@ public class App {
 	}
 
 	private int add(String title, String body) {
-		// 만약에 현재 꽉 차 있다면
-		// 새 업체과 계약한다.
+		
 
 		if (isArticlesFull()) {
 			System.out.printf("== 배열 사이즈 증가(%d => %d) ==\n", articles.length, articles.length * 2);
